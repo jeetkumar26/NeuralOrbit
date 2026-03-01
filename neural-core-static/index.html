@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuralOrbit — Sign In</title>
+    <meta name="description" content="Sign in to NeuralOrbit AI Operating System" />
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+</head>
+
+<body>
+    <div class="auth-page">
+        <div class="auth-card">
+
+            <!-- Logo -->
+            <div class="auth-logo">
+                <div class="auth-logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                        <path
+                            d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                        <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+                        <path d="M12 18v-5" />
+                        <path d="M9 9c0 .5.5 1 1 1s1-.5 1-1" />
+                        <path d="M14 9c0 .5-.5 1-1 1s-1-.5-1-1" />
+                    </svg>
+                </div>
+                <div class="auth-logo-text">
+                    <span class="auth-brand">NEURAL<span class="brand-accent">ORBIT</span></span>
+                    <span class="auth-tagline">AI OPERATING SYSTEM</span>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h1 class="auth-heading">Welcome back</h1>
+            <p class="auth-subheading">Sign in to your NeuralOrbit workspace</p>
+
+            <!-- Demo Credentials -->
+            <div class="auth-demo-chip">
+                <i class="bi bi-info-circle-fill auth-demo-chip-icon"></i>
+                <div class="auth-demo-chip-content">
+                    <strong>Demo — Admin:</strong> admin@neuralorbit.ai / NeuralAdmin@2025<br>
+                    <strong>Demo — User:</strong> user@neuralorbit.ai / NeuralUser@2025
+                </div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form" novalidate>
+
+                <!-- Email -->
+                <div class="auth-field">
+                    <label class="auth-label" for="login-email">Email Address</label>
+                    <div class="auth-input-wrap">
+                        <i class="bi bi-envelope auth-input-icon"></i>
+                        <input type="email" id="login-email" class="auth-input" placeholder="you@neuralorbit.ai"
+                            autocomplete="email" required />
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="auth-field">
+                    <label class="auth-label" for="login-password">Password</label>
+                    <div class="auth-input-wrap">
+                        <i class="bi bi-lock auth-input-icon"></i>
+                        <input type="password" id="login-password" class="auth-input" placeholder="Your password"
+                            autocomplete="current-password" required />
+                    </div>
+                </div>
+
+                <!-- Error Message -->
+                <div class="auth-error" id="login-error">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <span id="login-error-msg">Invalid email or password.</span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="auth-btn" id="login-btn">
+                    <i class="bi bi-lightning-fill"></i>
+                    Sign In to NeuralOrbit
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="auth-footer">
+            Powered by <span>NeuralOrbit</span> AI · v2.0
+        </div>
+    </div>
+
+    <!-- Supabase CDN (must load before client init) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Auth Scripts -->
+    <script src="js/supabase-client.js"></script>
+    <script src="js/auth.js"></script>
+
+    <!-- Init login page -->
+    <script>
+        window.initLoginPage();
+    </script>
+
+</body>
+
+</html>

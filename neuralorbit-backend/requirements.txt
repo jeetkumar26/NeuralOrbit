@@ -1,0 +1,26 @@
+# NeuralOrbit Backend — Phase 1 Requirements
+# Unpinned so pip finds the latest pre-built wheels for your Python version
+
+# ── Core Framework ────────────────────────────────────
+fastapi
+uvicorn[standard]
+
+# ── Supabase ──────────────────────────────────────────
+supabase
+
+# ── Auth / JWT ────────────────────────────────────────
+python-jose[cryptography]
+
+# ── Settings / Config ─────────────────────────────────
+pydantic-settings
+python-dotenv
+
+# ── HTTP ──────────────────────────────────────────────
+httpx
+python-multipart
+
+# ── Phase 2 (uncomment when ready) ───────────────────
+# celery
+# redis
+# scikit-learn
+# numpy
